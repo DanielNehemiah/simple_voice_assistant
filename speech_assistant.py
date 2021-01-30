@@ -69,19 +69,11 @@ if __name__=='__main__':
             webbrowser.open_new_tab(text)
             time.sleep(5)     
             
-        elif 'open googlr' in text:
+        elif 'open google' in text:
             webbrowser.open_new_tab("https://www.google.com")
             respond("Google is open")
             time.sleep(5)
-            
-        elif 'youtube' in text: 
-            driver = webdriver.Chrome(r"Mention your webdriver location") 
-            driver.implicitly_wait(1) 
-            driver.maximize_window()
-            respond("Opening in youtube") 
-            indx = text.split().index('youtube') 
-            query = text.split()[indx + 1:] 
-            driver.get("http://www.youtube.com/results?search_query =" + '+'.join(query))              
+          
                 
         elif "open word" in text: 
             respond("Opening Microsoft Word") 
